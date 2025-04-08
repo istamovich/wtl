@@ -10,9 +10,7 @@ const Consolidated = () => {
       <div className="about-image w-full md:w-1/2 mb-4 md:mb-0 mt-12 md:mt-0">
         <img
           src={AboutLeft}
-          alt="About"
-          className="w-[50%] md:w-[90%] h-auto object-contain mx-auto"
-          style={{ transform: 'scale(0.881111)', transition: 'transform 0.1s ease-out' }}
+          alt=""
         />
       </div>
       <div className="about-text md:w-1/2 md:pl-8 pt-4 md:pt-0 p-5">
