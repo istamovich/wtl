@@ -17,7 +17,7 @@ import ContactForm from "./components/ContactForm";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import FloatingCallButton from "./components/FloatingCallButton";
-import '.././i18n'; 
+import '.././i18n';
 
 
 function App() {
@@ -25,13 +25,17 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="bg-[#F8F9FA]">
+      <div className="bg-gray-50">
         <Hero />
         <Advantages />
         <Services />
         <Consolidated />
-        <About />
-        <Skills />
+        <div id="about">
+          <About />
+        </div>
+        <div id="skills">
+          <Skills />
+        </div>
         <ShippingServices />
         <TariffsSection />
         <TariffRequestSection />

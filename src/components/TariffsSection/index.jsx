@@ -58,9 +58,15 @@ const data = {
 const TariffsSection = () => {
     const { t, i18n } = useTranslation();
     const [selected, setSelected] = useState("Eurofura");
+    const [selectedSize, setSelectedSize] = useState(data["Eurofura"].sizes[0]);
 
     const current = data[selected];
     const currentLang = i18n.language || 'uz';
+
+    // Size tanlovlari har safar tirkama o'zgarganda reset bo'lishi uchun
+    React.useEffect(() => {
+        setSelectedSize(data[selected].sizes[0]);
+    }, [selected]);
 
     return (
         <div className="min-h-screen bg-gray-50">
@@ -103,10 +109,12 @@ const TariffsSection = () => {
                                     {current.sizes.map((size, idx) => (
                                         <button
                                             key={idx}
-                                            className={`px-4 py-2 rounded-lg transition-all duration-300 ${idx === 0
-                                                ? "bg-blue-500 text-white"
-                                                : "bg-gray-100 hover:bg-gray-200 text-gray-700"
-                                                }`}
+                                            onClick={() => setSelectedSize(size)}
+                                            className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                                                selectedSize === size
+                                                    ? "bg-blue-500 text-white"
+                                                    : "bg-gray-100 hover:bg-gray-200 text-gray-700"
+                                            }`}
                                         >
                                             {size}
                                         </button>
