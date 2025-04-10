@@ -66,7 +66,7 @@ const TariffsSection = () => {
         <div className="min-h-screen bg-gray-50">
             <div id="tariffs" className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 max-w-7xl">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-                    <span className="text-blue-500">{t("heading")}</span>{" "}
+                    <span className="text-blue-500">{t("skills.TariffsSection.title")}</span>{" "}
                     <span className="text-black">{current.title}</span>
                 </h2>
                 <p className="text-center text-lg mb-4">{current.description[currentLang]}</p>
@@ -98,7 +98,7 @@ const TariffsSection = () => {
 
                         <div className="space-y-6">
                             <div>
-                                <h4 className="text-lg font-semibold mb-3">{t("selectSize")}</h4>
+                                <h4 className="text-lg font-semibold mb-3">{t("skills.TariffsSection.chooseSize")}</h4>
                                 <div className="flex flex-wrap gap-3">
                                     {current.sizes.map((size, idx) => (
                                         <button
@@ -120,7 +120,7 @@ const TariffsSection = () => {
                             <div className="space-y-2">
                                 {current.specs.map((spec, i) => (
                                     <div key={i} className="flex justify-between py-2 border-b">
-                                        <span className="text-gray-600">{t(`specs.${spec.key}`)}:</span>
+                                        <span className="text-gray-600">{t(`skills.TariffsSection.specs.${spec.key}`)}:</span>
                                         <span className="font-semibold">{spec.value}</span>
                                     </div>
                                 ))}
@@ -130,7 +130,7 @@ const TariffsSection = () => {
                                 href="#contactForm"
                                 className="mt-6 block w-full text-center bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-8 rounded-lg font-semibold text-lg transition-all duration-300 hover:from-blue-600 hover:to-blue-700 hover:shadow-xl transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                             >
-                                {t("orderNow")}
+                                {t("skills.TariffsSection.orderNow")}
                             </a>
                         </div>
                     </div>
