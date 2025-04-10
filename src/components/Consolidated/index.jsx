@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import AboutLeft from '../../assets/About-left.png';
 
 const Consolidated = () => {
   const { t } = useTranslation();
@@ -9,7 +8,7 @@ const Consolidated = () => {
     <div id="services" className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
       <div className="about-image w-full md:w-1/2 mb-4 md:mb-0 mt-12 md:mt-0">
         <img
-          src={AboutLeft}
+          src="https://www.wtlogistic.uz/assets/About-left-bg-D-sG5c5Z.png"
           alt=""
         />
       </div>
