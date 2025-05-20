@@ -32,7 +32,7 @@ function Navbar() {
                 <div className="container py-2 mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-[70px]">
                         <div className="flex items-center gap-4">
-                            <div className="flex-shrink-0 font-bold text-2xl">TFC</div>
+                            <div className="flex-shrink-0 font-bold text-2xl">VIA</div>
                             <div className="h-8 w-px bg-gray-300"></div>
                             <div className="text-sm text-gray-600"> {t("Transport-ekspeditsiya kompaniyasi")}</div>
                         </div>
