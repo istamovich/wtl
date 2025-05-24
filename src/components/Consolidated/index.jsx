@@ -38,7 +38,6 @@ const Consolidated = () => {
         <p className="text-lg text-gray-600">
           {t('Bu tashishlar turli sohalarning ishlashini ta\'minlashda muhim rol o\'ynaydi va milliy iqtisodiyotning barqarorligini ta\'minlaydi. Biz har')}
           <br />
-          {t('qanday yuklarni "eshikdan eshikgacha" eng qisqa muddatda va eng yaxshi sifat bilan yetkazib beramiz. Uskunalar yetkazib berish, qurilish va yo\'l maxsus texnikasi, qurilish materiallari, mebel, maishiy texnika, ehtiyot qismlar va hatto samolyot - bizning ko\'p yillik tajribamiz tashishni tashkil etishda keng imkoniyatlar beradi.')}
         </p>
       </div>
     </div>
