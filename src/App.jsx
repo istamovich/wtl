@@ -18,36 +18,40 @@ import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import FloatingCallButton from "./components/FloatingCallButton";
 import '.././i18n';
+import { HelmetProvider } from "react-helmet-async";
 
 
 function App() {
 
   return (
     <>
-      <Navbar />
-      <div className="bg-gray-50">
-        <Hero />
-        <Advantages />
-        <Services />
-        <Consolidated />
-        <div id="about">
-          <About />
+      <HelmetProvider>
+
+        <Navbar />
+        <div className="bg-gray-50">
+          <Hero />
+          <Advantages />
+          <Services />
+          <Consolidated />
+          <div id="about">
+            <About />
+          </div>
+          <div id="skills">
+            <Skills />
+          </div>
+          <ShippingServices />
+          <TariffsSection />
+          <TariffRequestSection />
+          <RoutesSlider />
+          <StatsSection />
+          <PartnersSection />
+          <ProcessSteps />
+          <ContactForm />
+          <ContactSection />
         </div>
-        <div id="skills">
-          <Skills />
-        </div>
-        <ShippingServices />
-        <TariffsSection />
-        <TariffRequestSection />
-        <RoutesSlider />
-        <StatsSection />
-        <PartnersSection />
-        <ProcessSteps />
-        <ContactForm />
-        <ContactSection />
-      </div>
-      <Footer />
-      <FloatingCallButton />
+        <Footer />
+        <FloatingCallButton />
+      </HelmetProvider>
     </>
   );
 }

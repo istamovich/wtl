@@ -1,8 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 
 const Services = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const servicesData = [
     {
@@ -32,8 +33,24 @@ const Services = () => {
     }
   ];
 
+  const pageTitle = `${t("Bizning")} ${t("Xizmatlar")} | WT Logistic`;
+  const pageDescription = t("VIA Logistic kompaniyasi sizga avtomobil tashish, konsolidatsiya, Xitoydan yetkazib berish, ombor xizmatlari kabi keng ko‘lamli xizmatlarni taklif qiladi.");
+  const pageKeywords = "Avtomobil tashish, Yuk konsolidatsiyasi, Xitoydan yetkazib berish, Ombor xizmatlari, Yuk yetkazish, WT Logistic";
+
   return (
     <div id="services" className="py-20">
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={pageKeywords} />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content={i18n.language} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.viacargo.uz/" />
+      </Helmet>
+
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 flex flex-col md:flex-row items-center justify-center gap-2">

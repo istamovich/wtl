@@ -2,21 +2,36 @@ import React, { useState } from 'react';
 import heroImage from "../../assets/bg-hero.jpg";
 import ContactModal from '../ContactModal';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 
 const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const { t } = useTranslation(); // i18n hook
+    const { t, i18n } = useTranslation(); // i18n hook
+    const lang = i18n.language;
 
-    const openModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
     return (
         <>
+            <Helmet>
+                <html lang={lang} />
+                <title>{t("Transport kompaniyasi - Tez va xavfsiz yetkazib berish")}</title>
+                <meta name="description" content={t("Bizning transport kompaniyamiz yuklaringizni ishonchli va tez yetkazib berishni kafolatlaydi. Xizmatlarimizni ko‘rib chiqing.")} />
+                <meta name="keywords" content={t("transport, ekspeditsiya, yuk tashish, yetkazib berish, VIA kompaniya")} />
+                <meta name="robots" content="index, follow" />
+                <meta name="author" content="VIA Transport" />
+                <meta property="og:title" content={t("Transport kompaniyasi - Tez va xavfsiz yetkazib berish")} />
+                <meta property="og:description" content={t("Bizning transport kompaniyamiz yuklaringizni ishonchli va tez yetkazib berishni kafolatlaydi. Xizmatlarimizni ko‘rib chiqing.")} />
+                <meta property="og:image" content={heroImage} />
+                <meta property="og:type" content="website" />
+                <meta property="og:locale" content={lang} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={t("Transport kompaniyasi - Tez va xavfsiz yetkazib berish")} />
+                <meta name="twitter:description" content={t("Yuklaringizni tez va xavfsiz yetkazamiz. Biz bilan aloqa qiling!")} />
+                <meta name="twitter:image" content={heroImage} />
+            </Helmet>
+
             <div id='home'
                 className="flex justify-center items-center"
                 style={{
